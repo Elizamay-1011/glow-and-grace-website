@@ -1,0 +1,348 @@
+/* Home.css - Homepage styles excluding NavBar */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf7;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Title Section */
+.title-wrapper {
+  background-image: url('../assets/images/titlecontent-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title-bar {
+  width: 89%;
+  padding: 60px 80px;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.title-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.logo-title {
+  flex: 1;
+  min-width: 350px;
+  text-align: left;
+}
+
+.logo-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #E94F64;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.logo-title p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #4A4A4A;
+  margin-top: 1rem;
+  max-width: 500px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #d94f4f;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #c13f3f;
+  transform: translateY(-2px);
+}
+
+/* Promo Banner */
+.promo-banner {
+  background-color: #fbe4dc;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.promo-content h3 {
+  font-size: 2rem;
+  color: #e94f64;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.promo-content p {
+  font-size: 1rem;
+  color: #4a4a4a;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.promo-button {
+  background-color: #e94f64;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.promo-button:hover {
+  background-color: #d03f55;
+}
+
+/* Featured Products */
+.featured {
+  background-color: #fde8e8;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.featured h2 {
+  font-size: 2.5rem;
+  color: #e94f64;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  color: #e94f64;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.product-button {
+  background-color: #e94f64;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.product-button:hover {
+  background-color: #d03f55;
+}
+
+/* Ingredient Section */
+.ingredient {
+  background-color: #fef0ea;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.ingredient-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.ingredient h2 {
+  font-size: 2.5rem;
+  color: #e94f64;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ingredient p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* Articles Section */
+.article-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 36px;
+  width: auto;
+  margin: auto;
+  background: linear-gradient(to right, #fffaf7, #ffe5d9);
+}
+
+.article-text h2 {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #ff6f61;
+  margin-bottom: 8px;
+}
+
+.article-text p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.article-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 64px;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #fff0f5, #ffe5d9);
+}
+
+.article-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 8px 19px;
+  background-color: #ffb6b9;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #ff6f61;
+}
+
+.article-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.article-image img,
+.article-image1 img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title-bar {
+    padding: 40px 20px;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .title-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .logo-title h1 {
+    font-size: 2.2rem;
+  }
+
+  .logo-title p {
+    font-size: 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .article-row {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .article-image img,
+  .article-image1 img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-bar {
+    padding: 30px 10px;
+    font-size: 1.8rem;
+  }
+
+  .title-wrapper {
+    padding: 30px 10px;
+    flex-direction: column;
+    align-items: center;
+    background-size: contain;
+  }
+}
