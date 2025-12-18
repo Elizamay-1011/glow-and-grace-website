@@ -53,13 +53,13 @@ function NavBar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/About" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setOpen(false)}>
-            About Us
+          <NavLink to="/SkinQuiz" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setOpen(false)}>
+            Skin Quiz
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Contact" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setOpen(false)}>
-            Contact
+          <NavLink to="/About" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setOpen(false)}>
+            About Us
           </NavLink>
         </li>
       </ul>

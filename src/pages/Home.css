@@ -1,5 +1,21 @@
 /* Home.css - Homepage styles excluding NavBar */
 
+/* CSS Variables */
+:root {
+  --primary-color: #e94f64;
+  --secondary-color: #ff6f61;
+  --promo-bg: #fbe4dc;
+  --featured-bg: #fde8e8;
+  --ingredient-bg: #fef0ea;
+  --article-bg: linear-gradient(to right, #fffaf7, #ffe5d9);
+  --article-row-bg: linear-gradient(to right, #fff0f5, #ffe5d9);
+  --button-hover: #d03f55;
+  --read-more-bg: #ff7aa2;
+  --read-more-hover: #ff5f8d;
+  --text-color: #4a4a4a;
+}
+
+/* Global Styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -50,16 +66,14 @@ html {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   font-weight: 700;
-  color: #E94F64;
+  color: var(--primary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .logo-title p {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.2rem;
-  font-style: italic;
-  color: #4A4A4A;
+  color: var(--text-color);
   margin-top: 1rem;
   max-width: 500px;
 }
@@ -67,7 +81,7 @@ html {
 .cta-button {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background-color: #d94f4f;
+  background-color: var(--primary-color);
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
@@ -78,13 +92,13 @@ html {
 }
 
 .cta-button:hover {
-  background-color: #c13f3f;
+  background-color: var(--button-hover);
   transform: translateY(-2px);
 }
 
 /* Promo Banner */
 .promo-banner {
-  background-color: #fbe4dc;
+  background-color: var(--promo-bg);
   padding: 2rem;
   text-align: center;
   border-radius: 12px;
@@ -95,7 +109,7 @@ html {
 
 .promo-content h3 {
   font-size: 2rem;
-  color: #e94f64;
+  color: var(--primary-color);
   font-family: 'Playfair Display', serif;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -104,13 +118,13 @@ html {
 
 .promo-content p {
   font-size: 1rem;
-  color: #4a4a4a;
+  color: var(--text-color);
   font-style: italic;
   margin-bottom: 1.5rem;
 }
 
 .promo-button {
-  background-color: #e94f64;
+  background-color: var(--primary-color);
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
@@ -120,19 +134,19 @@ html {
 }
 
 .promo-button:hover {
-  background-color: #d03f55;
+  background-color: var(--button-hover);
 }
 
 /* Featured Products */
 .featured {
-  background-color: #fde8e8;
+  background-color: var(--featured-bg);
   padding: 4rem 2rem;
   text-align: center;
 }
 
 .featured h2 {
   font-size: 2.5rem;
-  color: #e94f64;
+  color: var(--primary-color);
   font-family: 'Playfair Display', serif;
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -142,7 +156,7 @@ html {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -151,7 +165,7 @@ html {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 1rem;
+  padding: 1.75rem;
   transition: transform 0.3s ease;
 }
 
@@ -166,19 +180,18 @@ html {
 }
 
 .product-card h3 {
-  font-size: 1.2rem;
-  color: #e94f64;
+  font-size: 1.4rem;
+  color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
 .product-card p {
-  font-size: 0.9rem;
-  font-style: italic;
+  font-size: 1.05rem;
   margin-bottom: 1rem;
 }
 
 .product-button {
-  background-color: #e94f64;
+  background-color: var(--primary-color);
   color: white;
   padding: 0.4rem 1rem;
   border-radius: 30px;
@@ -189,12 +202,12 @@ html {
 }
 
 .product-button:hover {
-  background-color: #d03f55;
+  background-color: var(--button-hover);
 }
 
 /* Ingredient Section */
 .ingredient {
-  background-color: #fef0ea;
+  background-color: var(--ingredient-bg);
   padding: 60px 20px;
   text-align: center;
 }
@@ -210,8 +223,7 @@ html {
 
 .ingredient h2 {
   font-size: 2.5rem;
-  color: #e94f64;
-  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -219,8 +231,7 @@ html {
 
 .ingredient p {
   font-size: 1.1rem;
-  color: #4a4a4a;
-  font-style: italic;
+  color: var(--text-color);
   line-height: 1.8;
 }
 
@@ -228,17 +239,41 @@ html {
 .article-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 48px;
   padding: 36px;
-  width: auto;
   margin: auto;
-  background: linear-gradient(to right, #fffaf7, #ffe5d9);
+  background: var(--article-bg);
+}
+
+.article-section h2 {
+  font-size: 2.3rem;;
+}
+
+.article-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+  background: var(--article-row-bg);
+  max-width: 1000px;
+}
+
+.article-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.article-text {
+  flex: 1;
+  min-width: 280px;
 }
 
 .article-text h2 {
   font-size: 2rem;
   font-family: 'Playfair Display', serif;
-  color: #ff6f61;
+  color: var(--secondary-color);
   margin-bottom: 8px;
 }
 
@@ -249,47 +284,60 @@ html {
   margin-bottom: 1rem;
 }
 
-.article-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  margin-bottom: 64px;
-  flex-wrap: wrap;
-  background: linear-gradient(to right, #fff0f5, #ffe5d9);
+.article-meta {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.5rem;
 }
 
-.article-row.reverse {
-  flex-direction: row-reverse;
+.article-text h2 a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.article-text h2 a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.article-image-link {
+  flex: 1;
+  min-width: 280px;
+  text-decoration: none;
+}
+
+.article-image,
+.article-image1 {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-image:hover,
+.article-image1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .read-more {
   display: inline-block;
-  padding: 8px 19px;
-  background-color: #ffb6b9;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  background-color: var(--read-more-bg);
   color: white;
-  border-radius: 8px;
   text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  padding: 8px 19px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .read-more:hover {
-  background-color: #ff6f61;
-}
-
-.article-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-.article-image img,
-.article-image1 img {
-  width: 300px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  vertical-align: middle;
+  background-color: var(--read-more-hover);
+  text-decoration: underline;
 }
 
 /* Responsive */
@@ -303,7 +351,6 @@ html {
   .title-content {
     flex-direction: column;
     gap: 30px;
-    padding: 40px 20px;
   }
 
   .logo-title h1 {
@@ -325,9 +372,8 @@ html {
     padding: 1rem;
   }
 
-  .article-image img,
-  .article-image1 img {
-    width: 100%;
+  .article-image,
+  .article-image1 {
     max-width: 300px;
     margin: 0 auto;
   }
@@ -343,6 +389,6 @@ html {
     padding: 30px 10px;
     flex-direction: column;
     align-items: center;
-    background-size: contain;
+    background-size: cover;
   }
 }

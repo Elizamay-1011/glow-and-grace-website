@@ -119,24 +119,30 @@ function Home() {
         <h2>See Our Products In Action</h2>
 
         <article className="article-row">
+          <Link to="/blog/glow-deeper" className="article-image-link">
+            <img src={image1} alt="Radiant skincare" className="article-image1" />
+          </Link>
           <div className="article-text">
-            <h2>Glow Deeper: The Rituals Behind Radiant Skin</h2>
+            <h2>
+              <Link to="/blog/glow-deeper">Glow Deeper: The Rituals Behind Radiant Skin</Link>
+            </h2>
+            <p className="article-meta">By <Link to="/about">Eliza</Link> | Dec 18, 2025 | Skincare Tips</p>
             <p>Discover how daily skincare becomes a mindful ritual of renewal and self-respect.</p>
-            <a href="#" className="read-more">Read More →</a>
-          </div>
-          <div className="article-image1">
-            <img src={image1} alt="Radiant skincare" />
+            <Link to="/blog/glow-deeper" className="read-more">← Read More</Link>
           </div>
         </article>
 
         <article className="article-row reverse">
-          <div className="article-image">
-            <img src={image2} alt="Lip tint shades" />
-          </div>
+          <Link to="/blog/color-theory" className="article-image-link">
+            <img src={image2} alt="Lip tint shades" className="article-image" />
+          </Link>
           <div className="article-text">
-            <h2>Color Theory: How Your Lip Tint Speaks Louder Than Words</h2>
+            <h2>
+              <Link to="/blog/color-theory">Color Theory: How Your Lip Tint Speaks Louder Than Words</Link>
+            </h2>
+            <p className="article-meta">By <Link to="/about">Eliza</Link> | Dec 18, 2025 | Makeup & Beauty</p>
             <p>Explore how makeup choices reflect mood, identity, and cultural storytelling.</p>
-            <a href="#" className="read-more">Read More →</a>
+            <Link to="/blog/color-theory" className="read-more">Read More →</Link>
           </div>
         </article>
       </section>
