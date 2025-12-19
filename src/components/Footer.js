@@ -1,3 +1,4 @@
+import { FaFacebookF, FaInstagram, FaPinterestP } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
@@ -59,11 +60,39 @@ function Footer() {
           <li><Link to="/sitemap">Site Map</Link></li>
         </ul>
 
-        <div className="footer-social">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a>
+        <div className="flex items-center gap-5 mt-2 footer-social">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="text-gray-500 hover:text-[#ff7aa2] transition-colors duration-300"
+          >
+            <FaFacebookF size={22} />
+          </a>
+
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="text-gray-500 hover:text-[#ff7aa2] transition-colors duration-300"
+          >
+            <FaInstagram size={22} />
+          </a>
+
+          <a
+            href="https://pinterest.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Pinterest"
+            className="text-gray-500 hover:text-[#ff7aa2] transition-colors duration-300"
+          >
+            <FaPinterestP size={22} />
+          </a>
         </div>
+
+
       </div>
     </footer>
   );

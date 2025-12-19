@@ -23,6 +23,12 @@ body {
   color: #333;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -175,7 +181,9 @@ html {
 
 .product-card img {
   width: 100%;
-  border-radius: 8px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
   margin-bottom: 1rem;
 }
 
@@ -311,9 +319,9 @@ html {
 .article-image1 {
   width: 100%;
   max-width: 400px;
-  height: auto;
-  border-radius: 12px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -342,53 +350,160 @@ html {
 
 /* Responsive */
 @media (max-width: 768px) {
+  /* Title Section */
+  .title-wrapper {
+    height: auto;
+    padding: 60px 20px;
+    background-position: top;
+  }
+
   .title-bar {
+    width: 100%;
     padding: 40px 20px;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
   }
 
   .title-content {
+    flex-direction: row;       /* two columns */
+    justify-content: space-between;
+    align-items: flex-start;      
+    text-align: left;          /* align text to the left */
+    gap: 20px;                 /* spacing between text and image */
+    padding: 0 20px;
+  }
+
+  .logo-title {
+    flex: 1;                   /* take available space on the left */
+    display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: flex-start;   /* left-align text and button */
+    text-align: left;
   }
 
   .logo-title h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
 
   .logo-title p {
     font-size: 1rem;
+    align-content: first baseline;
   }
 
+  .logo-title .cta-button {
+    margin-top: 1rem;
+  }
+
+  /* Product Grid */
   .product-grid {
     grid-template-columns: 1fr;
-    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  /* Articles */
+  .article-section {
+    padding: 32px 16px;
+    gap: 36px;
   }
 
   .article-row {
     flex-direction: column;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+  }
+
+  .article-row.reverse {
+    flex-direction: column;
+  }
+
+  .article-text h2 {
+    font-size: 1.7rem;
+  }
+
+  .article-text p {
+    font-size: 1rem;
   }
 
   .article-image,
   .article-image1 {
-    max-width: 300px;
+    max-width: 320px;
     margin: 0 auto;
   }
 }
 
 @media (max-width: 480px) {
+  /* Title */
   .title-bar {
-    padding: 30px 10px;
-    font-size: 1.8rem;
+    padding: 30px 12px;
+    font-size: 1.6rem;
   }
 
-  .title-wrapper {
-    padding: 30px 10px;
-    flex-direction: column;
-    align-items: center;
-    background-size: cover;
+  .logo-title h1 {
+    font-size: 1.9rem;
+  }
+
+  .logo-title p {
+    font-size: 0.95rem;
+  }
+
+  /* Promo Banner */
+  .promo-banner {
+    padding: 1.5rem 1rem;
+  }
+
+  .promo-content h3 {
+    font-size: 1.6rem;
+  }
+
+  /* Section Headings */
+  .featured h2,
+  .ingredient h2,
+  .article-section h2 {
+    font-size: 1.9rem;
+  }
+
+  /* Article Images */
+  .article-image,
+  .article-image1 {
+    max-width: 280px;
   }
 }
+
+@media (max-width: 360px) {
+  body {
+    font-size: 14px;
+  }
+
+  .logo-title h1 {
+    font-size: 1.6rem;
+  }
+
+  .logo-title p {
+    font-size: 0.9rem;
+  }
+
+  /* Full-width Buttons for Touch */
+  .cta-button,
+  .promo-button,
+  .product-button,
+  .read-more {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  .article-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .article-text p {
+    font-size: 0.95rem;
+  }
+
+  .article-image,
+  .article-image1 {
+    max-width: 240px;
+  }
+}
+
+
