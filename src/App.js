@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import SkinQuiz from './pages/SkinQuiz';
 import About from './pages/About';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/skinquiz" element={<SkinQuiz />} />
       </Routes>
       <Footer/> {/* Footer can be added here if needed */}  
+      <BackToTop /> {/* Back to Top button */}
     </Router>
   );
 }

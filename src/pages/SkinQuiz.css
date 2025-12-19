@@ -1,0 +1,215 @@
+body {
+  background-color: #fff8f4;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* --- Quiz Header --- */
+.quiz-header {
+  background-color: #fceae8;
+  padding: 2rem;
+  text-align: center;
+}
+
+.quiz-header h1 {
+  color: #d94f70;
+  font-weight: 700;
+}
+
+.quiz-header .star {
+  margin: 0 0.25rem;
+  color: #ff6f61;
+}
+
+.quiz-header p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+/* --- Progress Bar --- */
+.progress-container {
+  margin: 2rem 0;
+}
+
+.progress-bar-bg {
+  height: 8px;
+  background: #f1f1f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #d94f70;
+  transition: width 0.4s ease-in-out;
+}
+
+/* --- Question Card --- */
+.question-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+}
+
+.question-card h5 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* --- Options --- */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* --- Select --- */
+select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* --- Buttons --- */
+.btn-gg {
+  background-color: #d94f70;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 25px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gg:hover {
+  background-color: #c03c5f;
+}
+
+.btn-gg:disabled {
+  background-color: #f2a1b3;
+  cursor: not-allowed;
+}
+
+/* --- Button Group --- */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* --- Modal --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content h3 {
+  color: #d94f70;
+  margin-bottom: 1rem;
+}
+
+.modal-content ul {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.5rem;
+}
+
+.email-input input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.btn-close {
+  margin-top: 0.5rem;
+  background: #ccc;
+  color: #333;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  background: #bbb;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .question-card {
+    padding: 1.5rem;
+  }
+
+  .btn-gg {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .quiz-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .quiz-header p {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .question-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  select,
+  .option-label {
+    font-size: 0.95rem;
+  }
+
+  .btn-gg {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .progress-bar-bg {
+    height: 6px;
+  }
+}

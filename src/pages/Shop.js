@@ -72,57 +72,57 @@ function Shop() {
   };
 
   // Sample product data
-  const productData = [
+    const productData = [
     {
-      category: 'Skin Care',
-      products: [
+        category: 'Skin Care',
+        products: [
         { img: riceCleanser, name: 'Gentle Rice Milk Cleanser', desc: 'Softens and brightens with fermented rice extract.', oldPrice: 'Php 1,200', newPrice: 'Php 1,000', rating: '★★★★★', reviews: '(69 Reviews)' },
         { img: botanicalCleanser, name: 'Gentle Botanical Cleanser', desc: 'Infused with green tea and chamomile for calming clarity.', oldPrice: 'Php 999.99', newPrice: 'Php 749.99', rating: '★★★★', reviews: '(53 Reviews)' },
         { img: balmCleanser, name: 'Enzyme Balm Cleanser', desc: 'Melts away makeup while nourishing with papaya enzymes.', oldPrice: 'Php 799.99', newPrice: 'Php 599.99', rating: '★★★', reviews: '(114 Reviews)' },
-        { img: dailyCream, name: 'HydraBloom Daily Cream' },
-        { img: ceramideCream, name: 'Ceramide Comfort Cream' },
-        { img: serum, name: 'Radiance Revival Serum' },
-      ],
+        { img: dailyCream, name: 'HydraBloom Daily Cream', desc: 'Hydrates all day with a light, silky texture.', oldPrice: 'Php 1,500', newPrice: 'Php 1,200', rating: '★★★★', reviews: '(87 Reviews)' },
+        { img: ceramideCream, name: 'Ceramide Comfort Cream', desc: 'Strengthens skin barrier with ceramides and shea butter.', oldPrice: 'Php 1,800', newPrice: 'Php 1,450', rating: '★★★★★', reviews: '(92 Reviews)' },
+        { img: serum, name: 'Radiance Revival Serum', desc: 'Boosts glow with vitamin C and hyaluronic acid.', oldPrice: 'Php 2,000', newPrice: 'Php 1,650', rating: '★★★★', reviews: '(76 Reviews)' },
+        ],
     },
     {
-      category: 'Makeup',
-      products: [
-        { img: lipVelvet, name: 'Lip Velvet Tint' },
-        { img: blushBalm, name: 'Blush Balm' },
-        { img: browGel, name: 'Brow Sculpt Gel' },
-      ],
+        category: 'Makeup',
+        products: [
+        { img: lipVelvet, name: 'Lip Velvet Tint', desc: 'Long-lasting matte color with nourishing oils.', oldPrice: 'Php 650', newPrice: 'Php 499', rating: '★★★★', reviews: '(120 Reviews)' },
+        { img: blushBalm, name: 'Blush Balm', desc: 'Creamy blush that blends effortlessly for a natural flush.', oldPrice: 'Php 550', newPrice: 'Php 420', rating: '★★★', reviews: '(68 Reviews)' },
+        { img: browGel, name: 'Brow Sculpt Gel', desc: 'Shapes and tints brows for a polished look all day.', oldPrice: 'Php 700', newPrice: 'Php 560', rating: '★★★★', reviews: '(54 Reviews)' },
+        ],
     },
     {
-      category: 'Body Care',
-      products: [
-        { img: bodyPolish, name: 'Botanical Body Polish' },
-        { img: bodyOil, name: 'Glow Body Oil' },
-        { img: bodyButter, name: 'Coconut Body Butter' },
-      ],
+        category: 'Body Care',
+        products: [
+        { img: bodyPolish, name: 'Botanical Body Polish', desc: 'Exfoliates and smooths skin with natural sugar crystals.', oldPrice: 'Php 950', newPrice: 'Php 750', rating: '★★★★', reviews: '(88 Reviews)' },
+        { img: bodyOil, name: 'Glow Body Oil', desc: 'Lightweight oil for radiant, hydrated skin.', oldPrice: 'Php 1,200', newPrice: 'Php 950', rating: '★★★★★', reviews: '(102 Reviews)' },
+        { img: bodyButter, name: 'Coconut Body Butter', desc: 'Rich cream with coconut and shea for deep moisturization.', oldPrice: 'Php 1,100', newPrice: 'Php 880', rating: '★★★★', reviews: '(75 Reviews)' },
+        ],
     },
     {
-      category: 'Hair Care',
-      products: [
-        { img: hairSerum, name: 'Silk Repair Hair Serum' },
-        { img: hairMask, name: 'Deep Nourish Hair Mask' },
-        { img: shampoo, name: 'Botanical Shampoo' },
-      ],
+        category: 'Hair Care',
+        products: [
+        { img: hairSerum, name: 'Silk Repair Hair Serum', desc: 'Repairs damaged ends and adds silky shine.', oldPrice: 'Php 1,400', newPrice: 'Php 1,120', rating: '★★★★', reviews: '(66 Reviews)' },
+        { img: hairMask, name: 'Deep Nourish Hair Mask', desc: 'Intense hydration for dry and brittle hair.', oldPrice: 'Php 1,600', newPrice: 'Php 1,280', rating: '★★★★★', reviews: '(80 Reviews)' },
+        { img: shampoo, name: 'Botanical Shampoo', desc: 'Gentle cleansing with herbal extracts for healthy scalp.', oldPrice: 'Php 900', newPrice: 'Php 720', rating: '★★★★', reviews: '(91 Reviews)' },
+        ],
     },
     {
-      category: 'Wellness & Inner Beauty',
-      products: [
-        { img: herbalTea, name: 'DreamEase Herbal Tea' },
-        { img: collagen, name: 'Glow Collagen Powder' },
-        { img: mist, name: 'Mood Mist Spray' },
-      ],
+        category: 'Wellness & Inner Beauty',
+        products: [
+        { img: herbalTea, name: 'DreamEase Herbal Tea', desc: 'Calms the mind and aids restful sleep.', oldPrice: 'Php 450', newPrice: 'Php 350', rating: '★★★★★', reviews: '(60 Reviews)' },
+        { img: collagen, name: 'Glow Collagen Powder', desc: 'Supports skin elasticity and overall radiance.', oldPrice: 'Php 1,200', newPrice: 'Php 950', rating: '★★★★', reviews: '(72 Reviews)' },
+        { img: mist, name: 'Mood Mist Spray', desc: 'Refreshing facial mist with uplifting botanicals.', oldPrice: 'Php 550', newPrice: 'Php 420', rating: '★★★★', reviews: '(48 Reviews)' },
+        ],
     },
     {
-      category: 'Beauty Accessories',
-      products: [
-        { img: roller, name: 'Rose Quartz Facial Roller' },
-      ],
+        category: 'Beauty Accessories',
+        products: [
+        { img: roller, name: 'Rose Quartz Facial Roller', desc: 'Promotes circulation and lymphatic drainage for glowing skin.', oldPrice: 'Php 850', newPrice: 'Php 680', rating: '★★★★', reviews: '(101 Reviews)' },
+        ],
     },
-  ];
+    ];
 
   // Filter products by search
   const filteredData = productData.map(cat => ({
