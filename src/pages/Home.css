@@ -431,23 +431,60 @@ html {
   }
 }
 
+/* =========================
+   MOBILE: 360px – 480px
+========================= */
+
 @media (max-width: 480px) {
-  /* Title */
+
+  /* ---------- Title / Hero ---------- */
+  .title-wrapper {
+    height: auto;
+    padding: 64px 16px;
+    background-position: top center;
+    background-size: cover; /* keep SVG intact */
+  }
+
   .title-bar {
-    padding: 30px 12px;
+    width: 100%;
+    padding: 0;
+    text-align: left;
     font-size: 1.6rem;
+  }
+
+  .title-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .logo-title {
+    min-width: unset;
+    text-align: center;
+    align-items: center;
   }
 
   .logo-title h1 {
     font-size: 1.9rem;
+    line-height: 1.2;
   }
 
   .logo-title p {
     font-size: 0.95rem;
+    max-width: 320px;
   }
 
-  /* Promo Banner */
+  .cta-button {
+    margin-top: 1.25rem;
+    width: fit-content;
+    max-width: 260px;
+    text-align: center;
+  }
+
+  /* ---------- Promo Banner ---------- */
   .promo-banner {
+    margin: 1.5rem 1rem;
     padding: 1.5rem 1rem;
   }
 
@@ -455,45 +492,70 @@ html {
     font-size: 1.6rem;
   }
 
-  /* Section Headings */
-  .featured h2,
-  .ingredient h2,
-  .article-section h2 {
+  .promo-content p {
+    font-size: 0.95rem;
+  }
+
+  /* ---------- Featured Products ---------- */
+  .featured {
+    padding: 3rem 1rem;
+  }
+
+  .featured h2 {
     font-size: 1.9rem;
   }
 
-  /* Article Images */
-  .article-image,
-  .article-image1 {
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 360px) {
-  body {
-    font-size: 14px;
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
 
-  .logo-title h1 {
-    font-size: 1.6rem;
+  .product-card {
+    padding: 1.5rem;
   }
 
-  .logo-title p {
-    font-size: 0.9rem;
+  /* ---------- Ingredient ---------- */
+  .ingredient {
+    padding: 48px 16px;
   }
 
-  /* Full-width Buttons for Touch */
-  .cta-button,
-  .promo-button,
-  .product-button,
-  .read-more {
-    width: 100%;
+  .ingredient-content {
+    padding: 1.5rem;
+  }
+
+  .ingredient h2 {
+    font-size: 1.9rem;
+  }
+
+  .ingredient p {
+    font-size: 1rem;
+  }
+
+  /* ---------- Articles ---------- */
+  .article-section {
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  .article-section h2 {
+    font-size: 1.9rem;
     text-align: center;
-    padding: 0.8rem;
+  }
+
+  .article-row,
+  .article-row.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .article-text {
+    min-width: unset;
   }
 
   .article-text h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .article-text p {
@@ -502,8 +564,71 @@ html {
 
   .article-image,
   .article-image1 {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .read-more {
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+  }
+}
+
+/* =========================
+   EXTRA SMALL: 360px
+========================= */
+
+@media (max-width: 360px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  .title-bar {
+    text-align: left;
+  }
+
+  .title-content {
+    align-items: flex-start;
+  }
+
+  .logo-title {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+   .logo-title h1 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  .logo-title p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button,
+  .promo-button,
+  .product-button,
+  .read-more {
+    width: 100%;
+    padding: 0.85rem;
+  }
+
+  .cta-button {
+    width: fit-content;   /* stays aligned with text */
+    text-align: left;
+  }
+
+  .article-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .article-image,
+  .article-image1 {
     max-width: 240px;
   }
 }
+
 
 

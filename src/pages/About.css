@@ -1,0 +1,211 @@
+.about-page {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f4;
+  color: #333;
+}
+
+/* Hero */
+.about-hero {
+  background-color: #fceae8;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about-hero h1 {
+  color: #d94f70;
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+}
+
+/* Core Values */
+.about-values {
+  padding: 4rem 2rem;
+}
+
+.about-values h2 {
+  margin-bottom: 2rem;
+}
+
+/* 2x2 Grid */
+.values-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.values-cards .card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  flex: 1 1 45%;
+  max-width: 45%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* Founder */
+.founder-profile {
+  padding: 4rem 2rem;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap; /* ✅ FIXED */
+  margin-top: 2rem;
+}
+
+.founder-img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.profile-text {
+  flex: 1;
+}
+
+.profile-text h3 {
+  color: #d94f70;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.profile-text p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  padding: 4rem 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mission-vision .card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* CTA */
+.about-cta {
+  background-color: #fceae8;
+  padding: 3rem 2rem;
+}
+
+.btn-gg {
+  background-color: #d94f70;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-gg:hover {
+  background-color: #c03c5f;
+}
+
+/* =====================
+   RESPONSIVE BREAKPOINTS
+   ===================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-text h3 {
+    font-size: 1.75rem;
+  }
+
+  .values-cards .card {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+
+  .about-values,
+  .founder-profile,
+  .mission-vision {
+    padding: 3rem 1.5rem;
+  }
+
+  .values-cards .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .founder-img {
+    width: 200px;
+  }
+
+  .profile-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .profile-text p {
+    font-size: 0.95rem;
+  }
+
+  .btn-gg {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Extra small phones (≤ 360px) */
+@media (max-width: 360px) {
+  .about-hero h1 {
+    font-size: 1.25rem;
+  }
+
+  .about-hero p {
+    font-size: 0.9rem;
+  }
+
+  .profile-text h3 {
+    font-size: 1.35rem;
+  }
+
+  .profile-text p {
+    font-size: 0.9rem;
+  }
+
+  .founder-img {
+    width: 180px;
+  }
+
+  .mission-vision .card {
+    padding: 1.25rem;
+  }
+}
