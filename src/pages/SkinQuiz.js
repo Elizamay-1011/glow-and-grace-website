@@ -55,8 +55,17 @@ export default function SkinQuiz() {
 
     alert(`Glow Plan sent to ${email}!`);
 
-    // Force refresh (resets quiz completely)
-    window.location.reload();
+    // Reset all quiz state
+    setAnswers({
+      skinType: '',
+      skinConcern: '',
+      routine: ''
+    });
+    setEmail('');
+    setShowModal(false);
+
+    // Optionally, scroll back to top of quiz
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
