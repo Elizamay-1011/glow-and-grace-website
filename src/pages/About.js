@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './About.css';
 import founderImg from '../assets/images/founder.png'; // update path if needed
+import { Link } from 'react-router-dom';
 
 export default function About() {
   useEffect(() => {
@@ -111,12 +112,12 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="about-cta text-center">
-        <h3>Discover Your Glow</h3>
-        <a href="/skinquiz" className="btn-gg">
-          Take the Skin Quiz
-        </a>
-      </section>
+        <section className="about-cta text-center">
+          <h3>Discover Your Glow</h3>
+          <Link to="/skinquiz" className="btn-gg">
+            Take the Skin Quiz
+          </Link>
+        </section>
 
     </div>
   );
