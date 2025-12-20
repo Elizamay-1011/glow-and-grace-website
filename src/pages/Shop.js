@@ -24,7 +24,6 @@ import mist from '../assets/images/mist-spray.jpg';
 import roller from '../assets/images/facial-roller.jpg';
 
 function Shop() {
-
   useEffect(() => {
     document.title = 'Glow and Grace Beauty | Shop';
   }, []);
@@ -59,6 +58,19 @@ function Shop() {
   const handleQtyChange = (index, value) => {
     const updated = [...cartItems];
     updated[index].qty = parseInt(value) || 1;
+    setCartItems(updated);
+  };
+
+  // Cart item increment/decrement
+  const incrementQty = (index) => {
+    const updated = [...cartItems];
+    updated[index].qty += 1;
+    setCartItems(updated);
+  };
+
+  const decrementQty = (index) => {
+    const updated = [...cartItems];
+    updated[index].qty = Math.max(1, updated[index].qty - 1);
     setCartItems(updated);
   };
 
@@ -129,7 +141,6 @@ function Shop() {
     },
   ];
 
-  // Filter products by search
   const filteredData = productData.map(cat => ({
     ...cat,
     products: cat.products.filter(product =>
@@ -140,12 +151,12 @@ function Shop() {
   const cartCount = cartItems.reduce((acc, item) => acc + item.qty, 0);
 
   const totalAmount = cartItems
-  .filter(item => item.checked)
-  .reduce((acc, item) => {
-    const price = parseFloat((item.newPrice || item.oldPrice).replace(/[^0-9.-]+/g,""));
-    return acc + price * item.qty;
-  }, 0)
-  .toLocaleString('en-PH', { style: 'currency', currency: 'PHP' });
+    .filter(item => item.checked)
+    .reduce((acc, item) => {
+      const price = parseFloat((item.newPrice || item.oldPrice).replace(/[^0-9.-]+/g,""));
+      return acc + price * item.qty;
+    }, 0)
+    .toLocaleString('en-PH', { style: 'currency', currency: 'PHP' });
 
   return (
     <section className="featured" id="shop">
@@ -247,13 +258,17 @@ function Shop() {
               <div className="cart-item-info">
                 <span className="cart-item-name">{item.name}</span>
                 <span className="cart-item-price">{item.newPrice || item.oldPrice}</span>
-                <input
-                  type="number"
-                  value={item.qty}
-                  min="1"
-                  onChange={(e) => handleQtyChange(idx, e.target.value)}
-                  className="cart-item-qty"
-                />
+                <div className="cart-item-qty-wrapper">
+                  <button onClick={() => decrementQty(idx)} className="qty-btn">−</button>
+                  <input
+                    type="number"
+                    value={item.qty}
+                    min="1"
+                    onChange={(e) => handleQtyChange(idx, e.target.value)}
+                    className="cart-item-qty"
+                  />
+                  <button onClick={() => incrementQty(idx)} className="qty-btn">+</button>
+                </div>
               </div>
               {/* Delete button */}
               <button
@@ -281,34 +296,33 @@ function Shop() {
           )}
         </div>
       )}
+    </section>
+  );
+}
 
-          </section>
-        );
-      }
-
-      // ProductCard component
-      function ProductCard({ img, name, desc, oldPrice, newPrice, rating, reviews, onAdd }) {
-        return (
-          <div className="product-card">
-            <img src={img} alt={name} className="product-img" />
-            <div className="product-info">
-              <h4 className="product-name">{name}</h4>
-              {desc && <p className="product-desc">{desc}</p>}
-              {(oldPrice || newPrice) && (
-                <div className="product-price">
-                  {oldPrice && <span className="old-price">{oldPrice}</span>}
-                  {newPrice && <span className="new-price">{newPrice}</span>}
-                </div>
-              )}
-              {rating && (
-                <div className="product-rating">
-                  {rating} <span className="review-count">{reviews}</span>
-                </div>
-              )}
-              <button className="add-to-cart" onClick={onAdd}>Add to Cart</button>
-            </div>
+// ProductCard component
+function ProductCard({ img, name, desc, oldPrice, newPrice, rating, reviews, onAdd }) {
+  return (
+    <div className="product-card">
+      <img src={img} alt={name} className="product-img" />
+      <div className="product-info">
+        <h4 className="product-name">{name}</h4>
+        {desc && <p className="product-desc">{desc}</p>}
+        {(oldPrice || newPrice) && (
+          <div className="product-price">
+            {oldPrice && <span className="old-price">{oldPrice}</span>}
+            {newPrice && <span className="new-price">{newPrice}</span>}
           </div>
-        );
+        )}
+        {rating && (
+          <div className="product-rating">
+            {rating} <span className="review-count">{reviews}</span>
+          </div>
+        )}
+        <button className="add-to-cart" onClick={onAdd}>Add to Cart</button>
+      </div>
+    </div>
+  );
 }
 
 export default Shop;
