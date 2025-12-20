@@ -7,10 +7,12 @@ import Shop from './pages/Shop';
 import SkinQuiz from './pages/SkinQuiz';
 import About from './pages/About';
 import BackToTop from './components/BackToTop';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />   {/* auto scroll on route change */}
       <NavBar /> {/* always visible */}
       <Routes>
         <Route path="/" element={<Home />} />
