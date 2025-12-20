@@ -438,36 +438,38 @@ html {
 @media (max-width: 480px) {
 
   /* ---------- Title / Hero ---------- */
+  /* ---------- Title / Hero ---------- */
   .title-wrapper {
-    height: auto;
-    padding: 64px 16px;
-    background-position: top center;
-    background-size: cover; /* keep SVG intact */
+    height: auto;                  /* allow content to expand */
+    padding: 64px 16px;            /* space around text */
+    background-image: url('../assets/images/titlecontent-bg-480.svg');
+    background-position: top center; /* keep main SVG area visible */
+    background-size: cover;        /* full width */
   }
 
   .title-bar {
     width: 100%;
     padding: 0;
-    text-align: left;
+    text-align: left;              /* left-aligned text */
     font-size: 1.6rem;
   }
 
   .title-content {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column;        /* stack text & image */
+    align-items: flex-start;       /* keep text left-aligned */
     gap: 24px;
     padding: 0;
   }
 
   .logo-title {
     min-width: unset;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .logo-title h1 {
     font-size: 1.9rem;
-    line-height: 1.2;
+    line-height: 1.25;
   }
 
   .logo-title p {
@@ -477,9 +479,8 @@ html {
 
   .cta-button {
     margin-top: 1.25rem;
-    width: fit-content;
-    max-width: 260px;
-    text-align: center;
+    width: fit-content;            /* button aligns with text */
+    padding: 0.75rem 1.75rem;
   }
 
   /* ---------- Promo Banner ---------- */
@@ -580,6 +581,10 @@ html {
 ========================= */
 
 @media (max-width: 360px) {
+
+  .title-wrapper {
+    background-image: url('../assets/images/titlecontent-bg-360.svg');
+  }
 
   body {
     font-size: 14px;

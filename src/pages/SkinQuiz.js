@@ -1,8 +1,13 @@
 // src/pages/SkinQuiz.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SkinQuiz.css';
 
 export default function SkinQuiz() {
+
+  useEffect(() => {
+    document.title = 'Glow and Grace Beauty | Skin Quiz';
+  }, []);
+  
   const [answers, setAnswers] = useState({
     skinType: '',
     skinConcern: '',
@@ -41,15 +46,17 @@ export default function SkinQuiz() {
     return recs;
   };
 
+  // 🔁 FORCE PAGE REFRESH AFTER SUBMIT
   const handleGetGlowPlan = () => {
     if (!email) {
       alert('Please enter your email!');
       return;
     }
-    // Placeholder for sending data
+
     alert(`Glow Plan sent to ${email}!`);
-    setShowModal(false);
-    setEmail('');
+
+    // Force refresh (resets quiz completely)
+    window.location.reload();
   };
 
   return (
@@ -88,6 +95,29 @@ export default function SkinQuiz() {
                   {type}
                 </label>
               ))}
+
+              <div className="skin-guide-cards">
+                <div className="skin-guide-card">
+                  <h6>Dry Skin</h6>
+                  <p>Feels tight, flaky, or rough. Needs extra hydration.</p>
+                </div>
+
+                <div className="skin-guide-card">
+                  <h6>Oily Skin</h6>
+                  <p>Shiny appearance, enlarged pores, prone to breakouts.</p>
+                </div>
+
+                <div className="skin-guide-card">
+                  <h6>Combination Skin</h6>
+                  <p>Oily T-zone with dry or normal cheeks.</p>
+                </div>
+
+                <div className="skin-guide-card">
+                  <h6>Sensitive Skin</h6>
+                  <p>Easily irritated, reacts to fragrance or harsh products.</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -166,6 +196,7 @@ export default function SkinQuiz() {
             <button className="btn-gg" onClick={handleGetGlowPlan}>
               Get My Glow Plan
             </button>
+
             <button className="btn-close" onClick={() => setShowModal(false)}>
               Close
             </button>

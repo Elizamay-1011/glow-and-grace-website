@@ -1,5 +1,5 @@
 // src/pages/Home.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import titleBg from '../assets/images/titlecontent-bg.svg';
@@ -13,6 +13,10 @@ import image1 from '../assets/images/image1.jpg';
 import image2 from '../assets/images/image2.webp';
 
 function Home() {
+  useEffect(() => {
+  document.title = 'Glow and Grace Beauty';
+}, []);
+
   return (
     <div>
       {/* NavBar is already imported in App.js, no need to repeat here */}

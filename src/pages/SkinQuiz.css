@@ -56,7 +56,35 @@ body {
 .question-card h5 {
   margin-bottom: 1rem;
   font-weight: 600;
+  font-size: 1.2rem;
 }
+
+.skin-guide-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skin-guide-card {
+  background: #fef0ea;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.skin-guide-card h6 {
+  color: #d94f70;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.skin-guide-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
 
 /* --- Options --- */
 .options {

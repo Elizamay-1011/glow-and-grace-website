@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './About.css';
 import founderImg from '../assets/images/founder.png'; // update path if needed
 
 export default function About() {
+  useEffect(() => {
+    document.title = 'About Glow and Grace Beauty';
+  }, []);
+  
   return (
     <div className="about-page">
 
